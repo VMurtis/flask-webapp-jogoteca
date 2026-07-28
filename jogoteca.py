@@ -21,7 +21,7 @@ def ola():
 def novo():
     return render_template('novo.html', titulo='Novo Jogo')
 
-@app.route('/criar')
+@app.route('/criar', methods=['POST',])
 def criar():
     nome = request.form['nome']
     categoria = request.form['categoria']
